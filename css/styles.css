@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*  font-family: 'Abril Fatface', cursive;
+    font-family: 'Staatliches', cursive;*/
+body{
+    font-family: 'Work Sans', sans-serif; 
+    background-color: mediumpurple;  
+}
+
+.container{
+    width: 800px;
+    height: 950px;
+    border: 10px solid black;
+}
+
+.wrapper{
+    margin: auto 20px;
+    
+}
+
+.header p{
+    padding: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.header p,span{
+    color: yellow;
+}
+.header h1{
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+    margin-left: 25px;
+    letter-spacing: 50px;
+    font-size: 100px;
+}
+.header .date{
+    margin-left: 25px;
+}
+
+.content-box{
+    display: flex;
+    
+}
+
+.left-aside{
+    margin-top: 25px;
+}
+.left-aside article{    
+    width: 200px;
+    margin: 20px;
+}
+
+.left-aside .article-1 span{
+    background-color:yellow;
+    padding: 3px 5px;
+    color: mediumpurple;
+    font-weight: bold;
+}
+.left-aside article h3{       
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: wheat;
+}
+
+.left-aside .article-2 h3{
+    color: yellow;
+    margin: 50px 0;
+}
+
+article p{       
+    color: wheat;
+}
+
+.right-aside h2{
+    color: yellow;
+    font-size: 50px;
+    font-style: oblique;
+}
+.right-aside .article-2{
+    margin-top: 400px;
+}
+main {
+    width: 310px;
+    height: 40px;
+}
+
+main img.model-img{
+    position: relative;
+    top: -85px;
+    left: -240px;   
+}
+
+footer img{
+    padding-left: 20px;
+    margin-top: 50px;
+}
+footer p{
+    color: wheat;
+    font-style: italic;
+    border-radius: 10px 1px;
+    margin-top: 20px;
+    background-color: black;
+    text-align: center;
+}
+    
+@media only screen and (min-width: 768px){
+    .container{
+        margin: auto;
+    }
+}
