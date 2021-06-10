@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background-container {
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/19/17/39/starry-night-1149815_960_720.jpg");
+  background-position: 50%;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  width: 500px;
+  height: 90vh;
+  position: relative;
+  margin: 20px auto;
+}
+
+header,
+footer {
+  background-color: #062222;
+  color: white;
+  text-align: center;
+}
+header .header__highlight,
+footer .header__highlight {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.cover .magazine-title {
+  border: 2px solid #9bdbf5;
+  border-left: 0;
+  border-right: 0;
+  color: white;
+  text-align: center;
+}
+.cover .magazine-title:hover {
+  font-size: 45px;
+}
+.cover .magazine-title .mag-title--break {
+  display: block;
+}
+
+.section-container {
+  margin-top: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topics-title,
+.collaborators-title {
+  padding: 10px;
+  color: #ec2b52;
+}
+
+.topics-list,
+.collaborators-list {
+  list-style: none;
+  color: white;
+  margin-left: 25px;
+  font-size: 16px;
+}
+.topics-list .topics__item,
+.topics-list .collaborators__item,
+.collaborators-list .topics__item,
+.collaborators-list .collaborators__item {
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.topics-list .topics__item:hover,
+.topics-list .collaborators__item:hover,
+.collaborators-list .topics__item:hover,
+.collaborators-list .collaborators__item:hover {
+  color: cornflowerblue;
+}
+.topics-list .topics__item--even,
+.topics-list .collaborators__item--even,
+.collaborators-list .topics__item--even,
+.collaborators-list .collaborators__item--even {
+  color: #9bdbf5;
+}
+.topics-list .topics__item--even:hover,
+.topics-list .collaborators__item--even:hover,
+.collaborators-list .topics__item--even:hover,
+.collaborators-list .collaborators__item--even:hover {
+  color: blueviolet;
+}
+
+.collaborators {
+  align-self: flex-end;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <h1 class="header" id="header1">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h2 class="header" id="header2">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h3 class="header" id="header3">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h4 class="header" id="header4">Hola <b>#BootcampMex</b> 2021!</h1>
-  </body>
-</html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Magazine Cover</title>
+</head>
+
+<body>
+    <div class="background-container" id="background-container">
+        <header>La primera revista de <span class="header__highlight">fotografía nocturna</span>.</header>
+        <main class="cover" id="cover">
+            <h1 class="magazine-title" id="magazine-title">FOTÓGRAFO <span class="mag-title--break"></span> NOCTURNO
+            </h1>
+            <div class="section-container" id="section-container">
+                <section class="topics" id="topics">
+                    <h2 class="topics-title" id="topics-title">Artículos</h2>
+                    <ul class="topics-list">
+                        <li class="topics__item topics__item--odd">Artículo 1</li>
+                        <li class="topics__item topics__item--even">Artículo 2</li>
+                        <li class="topics__item topics__item--odd">Artículo 3</li>
+                        <li class="topics__item topics__item--even">Artículo 4</li>
+                        <li class="topics__item topics__item--odd">Artículo 5</li>
+                        <li class="topics__item topics__item--even">Artículo 6</li>
+                        <li class="topics__item topics__item--odd">Artículo 7</li>
+                        <li class="topics__item topics__item--even">Artículo 8</li>
+                        <li class="topics__item topics__item--odd">Artículo 9</li>
+                        <li class="topics__item topics__item--even">Artículo 10</li>
+                    </ul>
+                </section>
+                <section class="collaborators" id="collaborators">
+                    <h2 class="collaborators-title" id="collaborators-title">Entrevistas</h2>
+                    <ul class="collaborators-list">
+                        <li class="collaborators__item collaborators__item--odd">Artículo 1</li>
+                        <li class="collaborators__item collaborators__item--even">Artículo 2</li>
+                        <li class="collaborators__item collaborators__item--odd">Artículo 3</li>
+                        <li class="collaborators__item collaborators__item--even">Artículo 4</li>
+                </section>
+            </div>
+            <footer>Además: tutoriales paso a paso, procesado, making of, galería del lector, noticias...</footer>
+        </main>
+    </div>
+</body>
+
+</html>
