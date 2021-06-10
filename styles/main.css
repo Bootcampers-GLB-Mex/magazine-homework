@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+}
+
+.container {
+  margin: 10px;
+}
+
+.magazine-cover {
+  background: linear-gradient(
+    0deg,
+    rgba(139, 197, 198, 1) 0%,
+    rgba(63, 105, 121, 1) 80%,
+    rgba(48, 79, 97, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.magazine-cover .cover {
+  width: 100%;
+}
+
+.magazine-cover {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30% auto auto auto auto;
+  grid-template-areas:
+    "header   header  tech-issue"
+    "inspire  none    tech-issue"
+    "inspire  none    bezos     "
+    "main     main    main"
+    "footer   footer  footer";
+}
+
+.header {
+  grid-area: header;
+  padding-left: 0%;
+}
+
+.header h1 {
+  font-size: 19em;
+  font-weight: 200;
+  position: relative;
+}
+
+.header .subtitle {
+  color: white;
+  padding-left: 17px;
+}
+
+.header h1 span {
+  font-size: 0.12em;
+  position: absolute;
+  top: 40%;
+  right: 1em;
+  color: white;
+}
+
+.inspire {
+  grid-area: inspire;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.inspire-title {
+  background-color: black;
+  color: white;
+  max-width: min-content;
+  font-weight: 200;
+  padding: 0 10px;
+}
+
+.inspire-cite h4,
+.inspire-cite p {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 5px 50px;
+}
+
+.inspire-cite {
+  color: white;
+}
+
+.inspire-cite-black {
+  color: black;
+}
+
+.tech-issue {
+  grid-area: tech-issue;
+  color: white;
+  padding: 5% 25%;
+  text-align: center;
+  position: relative;
+}
+
+.tech-issue h3 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 30;
+}
+
+.tech-issue h3 span {
+  font-size: 0.5em;
+  z-index: 2;
+}
+
+.tech-issue .number {
+  font-size: 6em;
+  font-weight: bold;
+}
+
+.tech-issue .plus-icon {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.tech-issue .info {
+  font-size: 1.5em;
+}
+
+.bezos {
+  grid-area: bezos;
+  padding: 30%;
+  color: white;
+  text-align: right;
+}
+
+.main {
+  grid-area: main;
+  color: white;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 6em;
+}
+
+.main p {
+  font-size: 1em;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: right;
+  padding-right: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 1187px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1107px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 967px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 887px) {
+  body {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 631px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 5px;
+  }
+}
