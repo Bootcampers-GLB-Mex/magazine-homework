@@ -1,0 +1,92 @@
+body {
+  color: white;
+}
+
+.grid_container {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 20px 250px 250px 250px 250px;
+  grid-template-rows: 80px 235px 135px 130px 130px 130px 130px 53px;
+  justify-content: center;
+}
+
+.grid_container div {
+  color: white;
+  /*border: 1px solid white;*/
+}
+
+.image {
+  width: 100%;
+  height: 100px;
+}
+
+.item_1 {
+  font-size: 30px;
+  font-family: "Gill Sans";
+  text-align: center;
+  grid-column: 2 / span 4;
+}
+
+.item_3 {
+  padding-top: 0px;
+  font-size: 60px;
+  font-family: "Gill Sans";
+  text-align: center;
+  justify-content: center;
+  grid-column: 2 / span 4;
+}
+
+.item_8 {
+  padding-right: 15px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.item_11 {
+  grid-column: 3 / span 2;
+  font-size: 39px;
+  text-align: center;
+  padding-top: 35px;
+  color: hotpink;
+}
+
+.item_12 {
+  padding-right: 15px;
+  font-size: 22px;
+  text-align: right;
+}
+
+.item_15 {
+  grid-column: 3 / span 2;
+  font-size: 50px;
+}
+
+.item_19 {
+  grid-column: 3 / span 2;
+  font-size: 30px;
+  text-align: center;
+  font-family: Verdana;
+}
+
+.item_22 {
+  font-family: Arial;
+  padding-top: 0px;
+  font-size: 50px;
+  font-weight: bold;
+  grid-column: 2 / span 2;
+}
+
+.item_24 {
+  font-family: Arial;
+  padding-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.item_26 {
+  grid-column: 2 / span 2;
+  font-family: Arial;
+  font-size: 15px;
+  text-align: center;
+}
