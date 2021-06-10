@@ -1,0 +1,159 @@
+/* variables */
+:root {
+  --accent: #eea8ff;
+  --base: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Source Serif Pro", serif;
+  color: var(--base);
+  line-height: 0.9;
+}
+
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-image: url("https://i.imgur.com/R2c9bdU.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 720px;
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone {
+  width: 500px;
+  height: 550px;
+  object-fit: contain;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 6.5em;
+  opacity: 0.9;
+  grid-column-start: 3 / 3;
+  text-align: center;
+}
+
+.title h1 {
+  font-weight: 500;
+  margin-top: 0;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: 0;
+  opacity: 0.95;
+}
+
+.title .title__date {
+  font-size: 12px;
+  margin-right: 17px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+
+.title__date {
+  text-align: right;
+}
+
+.bottom {
+  flex: 1;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.left__barcode {
+  display: flex;
+  border: 5px solid white;
+  max-width: 140px;
+}
+
+.left__first-title {
+  font-size: 2em;
+  padding: 2em 0 0 1em;
+  text-align: center;
+  position: relative;
+}
+
+.left__first-title .artist {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 1px 1px #828282;
+}
+
+.left__first-title .artist__name {
+  font-family: "Yesteryear", cursive;
+  font-size: 2em;
+  position: absolute;
+  left: 22px;
+  top: 110px;
+}
+
+.left__second-title {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 2em;
+  padding: 1em 0 0 1em;
+  position: relative;
+}
+
+.second-artist__light {
+  font-size: 0.75em;
+  font-weight: light;
+}
+
+.second-artist__name {
+  font-weight: bold;
+}
+
+.interviewee {
+  font-family: "Roboto";
+}
+
+.season {
+  color: var(--accent);
+}
+
+.right {
+  flex: 1;
+  text-align: right;
+  display: flex;
+}
+
+.right__first-title {
+  flex: 1;
+  align-self: self-end;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: right;
+  font-size: 1.25em;
+  padding: 0 1em 5em 0;
+  position: relative;
+}
+
+.season {
+  font-size: 2.5em;
+  font-family: "Roboto";
+  text-shadow: 1px 1px #828282;
+}
