@@ -1,0 +1,165 @@
+:root {
+  --yellow: #ffde0d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Andada";
+  src: url("../fonts/Andada.otf");
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #212121;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  background-color: white;
+  margin: 2rem auto;
+}
+
+.cover__picture {
+  margin: 1rem;
+  background-image: url("../img/ryan_portrait.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: contrast(120%);
+  height: 40rem;
+  width: 32rem;
+  font-family: "Almarai", sans-serif;
+}
+
+.info-cover {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.75rem;
+  padding-top: 0.75rem;
+  font-weight: 800;
+}
+
+.info-cover__title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 90%;
+  margin-bottom: 0.5rem;
+}
+
+.info-cover__name {
+  display: flex;
+  flex-direction: column;
+  color: var(--yellow);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 95%;
+  margin-bottom: 0.3rem;
+}
+
+.info-cover__description {
+  color: white;
+  font-weight: 100;
+  line-height: 110%;
+}
+
+.info-cover__description span {
+  color: var(--yellow);
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.75rem;
+  padding-top: 0.75rem;
+  margin-top: 4rem;
+  font-weight: 800;
+  line-height: 50%;
+}
+
+.plus__head {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.plus__title {
+  color: var(--yellow);
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 95%;
+}
+
+.plus__description {
+  color: white;
+  font-weight: 100;
+  line-height: 110%;
+}
+
+.plus__description span {
+  color: var(--yellow);
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.cover__head {
+  padding: 0 1rem;
+}
+
+.top-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  left: 2rem;
+  height: 1.4rem;
+}
+.top-line__info {
+  margin: 1rem 0.5rem;
+  font-size: 0.6rem;
+}
+
+.first-line span:first-child {
+  font-weight: 800;
+}
+
+.first-line span:last-child {
+  color: var(--yellow);
+}
+
+.second-line span {
+  font-weight: 800;
+  color: black;
+  font-size: 0.5rem;
+}
+
+.magazine-title {
+  font-family: "Andada";
+  font-size: 5.2rem;
+}
+
+.magazine-title span {
+  font-size: 6rem;
+}
+
+.date {
+  font-family: "Andada";
+  font-size: 0.8rem;
+}
+
+.date span:first-child {
+  color: var(--yellow);
+}
