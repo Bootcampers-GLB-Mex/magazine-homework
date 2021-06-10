@@ -32,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 65rem 1fr;
   grid-template-rows: repeat(8, 1fr);
-  max-width: 90rem;
+  width: 90rem;
   height: 120rem;
 }
 
@@ -155,7 +155,7 @@ body {
 @media screen and (max-width: 768px) {
   .magazine {
     grid-template-columns: 1fr 45rem 1fr;
-    max-width: 65rem;
+    width: 65rem;
     height: 85rem;
   }
   .magazine__header__title {
@@ -193,7 +193,7 @@ body {
 @media screen and (max-width: 320px) {
   .magazine {
     grid-template-columns: 1fr 18rem 1fr;
-    max-width: 31rem;
+    width: 31rem;
     height: 40rem;
   }
   .magazine__header__title {
