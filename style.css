@@ -1,0 +1,146 @@
+/*google font*/
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-weight: bold;
+}
+
+body {
+  font-family: "Viaoda Libre", cursive;
+  text-transform: uppercase;
+  background-color: #f4f4f4;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+.container {
+  margin: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.magazine {
+  background-image: url("https://images.unsplash.com/photo-1616380165072-03d8dbbc84d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=auto"); /* source:https://unsplash.com/t/fashion*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 900px;
+  height: 1300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.magazine__title {
+  position: relative;
+  align-self: flex-start;
+  font-size: 26vh;
+  color: #809e43;
+  letter-spacing: 10px;
+  left: 73.5rem;
+  top: -25px;
+}
+
+.magazine__subtitle {
+  position: relative;
+  align-self: flex-start;
+  font-size: 2vh;
+  color: #809e43;
+  text-transform: none;
+  left: 109.5rem;
+  top: 30px;
+}
+
+.magazine__c1 {
+  position: relative;
+  align-self: flex-start;
+  font-size: 5vh;
+  line-height: 0.9;
+  text-align: center;
+  top: 245px;
+  width: 100%;
+  left: 20rem;
+}
+
+.magazine__c1 b {
+  font-size: 10vh;
+}
+
+.magazine__c2 {
+  position: relative;
+  align-self: flex-start;
+  font-size: 3vh;
+  line-height: 1.1;
+  text-align: center;
+  color: white;
+  top: 40rem;
+  width: 100%;
+  left: 8.5rem;
+}
+
+.magazine__c2 b {
+  font-size: 7vh;
+}
+
+.magazine__c3 {
+  position: relative;
+  align-self: center;
+  font-size: 4vh;
+  line-height: 0.9;
+  text-align: center;
+  top: 15rem;
+  min-width: 180px;
+  left: -2rem;
+}
+
+.magazine__c4 {
+  position: relative;
+  font-size: 5vh;
+  line-height: 0.9;
+  font-weight: 500;
+  text-align: center;
+  top: 14rem;
+  min-width: 190px;
+  left: 29rem;
+}
+
+.magazine__highlight {
+  position: relative;
+  align-self: center;
+  font-size: 12vh;
+  text-align: center;
+  color: white;
+  line-height: 0.9;
+  top: 24rem;
+  right: 23rem;
+}
+
+.magazine__highlight b {
+  font-size: 22vh;
+  letter-spacing: 5px;
+}
+
+.magazine__subhighlight {
+  position: relative;
+  align-self: center;
+  font-size: 8vh;
+  text-align: center;
+  color: #809e43;
+  right: 76rem;
+  top: 37rem;
+  letter-spacing: 5px;
+  min-width: 100%;
+}
