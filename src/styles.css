@@ -1,3 +1,7 @@
+:root {
+  --yellow: #ffde0d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +26,7 @@ main {
 
 .cover {
   background-color: white;
+  margin: 2rem auto;
 }
 
 .cover__picture {
@@ -31,7 +36,7 @@ main {
   background-position: center;
   background-size: cover;
   filter: contrast(120%);
-  height: 100vh;
+  height: 40rem;
   width: 32rem;
   font-family: "Almarai", sans-serif;
 }
@@ -56,7 +61,7 @@ main {
 .info-cover__name {
   display: flex;
   flex-direction: column;
-  color: #ffde0d;
+  color: var(--yellow);
   font-size: 2rem;
   letter-spacing: 1px;
   line-height: 95%;
@@ -70,7 +75,7 @@ main {
 }
 
 .info-cover__description span {
-  color: #ffde0d;
+  color: var(--yellow);
   font-size: 0.5rem;
   font-weight: 600;
 }
@@ -92,7 +97,7 @@ main {
 }
 
 .plus__title {
-  color: #ffde0d;
+  color: var(--yellow);
   font-size: 1.5rem;
   letter-spacing: 0;
   line-height: 95%;
@@ -105,7 +110,7 @@ main {
 }
 
 .plus__description span {
-  color: #ffde0d;
+  color: var(--yellow);
   font-size: 0.5rem;
   font-weight: 600;
 }
@@ -132,7 +137,7 @@ main {
 }
 
 .first-line span:last-child {
-  color: #ffde0d;
+  color: var(--yellow);
 }
 
 .second-line span {
@@ -156,5 +161,5 @@ main {
 }
 
 .date span:first-child {
-  color: #ffde0d;
+  color: var(--yellow);
 }
