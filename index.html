@@ -1,26 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>MARM - Magazine</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro:wght@300;400&family=Yesteryear&display=swap");
+    </style>
   </head>
+
   <body>
-    <h1 class="header" id="header1">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h2 class="header" id="header2">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h3 class="header" id="header3">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h4 class="header" id="header4">Hola <b>#BootcampMex</b> 2021!</h1>
+    <div id="app">
+      <div class="container">
+        <section class="title">
+          <h1>VOGUE</h1>
+          <div class="title__date">
+            <span>DECEMBER '19</span>
+          </div>
+        </section>
+        <section class="bottom">
+          <div class="left">
+            <div class="left__first-title">
+              <span class="artist"
+                >THE RISE <br />
+                OF <br />
+              </span>
+              <span class="artist__name">Rihanna</span>
+            </div>
+            <div class="left__second-title">
+              <span class="second-artist__name"
+                >MARGOT <br />
+                ROBBIE</span
+              >
+              <span class="second-artist__light">
+                <br />interviewed by <br />
+                <strong class="interviewee">Quentin Tarantino</strong>
+              </span>
+            </div>
+            <div class="left__barcode">
+              <img src="https://i.imgur.com/f3B92Xe.png" alt="barcode" />
+            </div>
+          </div>
+          <div class="right">
+            <div class="right__first-title">
+              <span
+                >THE <br />
+                DECEMBER <br />
+                ISSUE</span
+              >
+              <br />
+              <span class="season"
+                >BRAVE <br />
+                NEW <br />
+                SEASON</span
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
   </body>
 </html>
-
