@@ -90,13 +90,13 @@ body {
   text-align: center;
   text-shadow: 2px 2px 2px var(--shadow);
   text-transform: uppercase;
-  top: -90px;
+  bottom: 90px;
 }
 
 .magazine .magazine__highlight {
   position: relative;
   right: 10px;
-  top: -40px;
+  bottom: 40px;
   width: 95%;
 }
 
