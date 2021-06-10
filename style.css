@@ -1,4 +1,4 @@
-.portada {
+.magazine {
   background-image: url("loki.jpg");
   background-position: center;
   background-size: cover;
@@ -6,27 +6,31 @@
   height: 700px;
   width: 500px;
 }
-.grid-container {
+.magazine_grid {
   display: grid;
   grid-template: 15% 0.9fr 1.6fr 0.6fr 2fr / 1fr 1fr 1fr;
 }
-.portada-titulo {
+.magazine_title {
+  display: grid;
+  grid-template: 95% / 1fr;
+}
+.title_text {
   grid-area: 1/1/2/4;
   margin-top: 0;
   color: white;
   font-size: 92px;
   font-family: "Oswald", sans-serif;
 }
-.portada-revista {
-  grid-area: 2/1/3/2;
+.title_name {
+  grid-area: 2/1/3/3;
 }
-.portada-revista p {
+.title_name p {
   color: black;
   font-family: "Oswald", sans-serif;
   background-color: yellow;
 }
 
-.portada-articulo {
+.magazine_article {
   grid-area: 3/3/5/4;
   text-align: right;
 }
@@ -43,28 +47,28 @@ h2 {
   margin: 0;
   display: inline;
 }
-.portada-articulo2 {
+.magazine_article2 {
   grid-area: 4/3/6/4;
   text-align: right;
 }
-.portada-articulo3 {
+.magazine_article3 {
   grid-area: 5/3/6/4;
   text-align: right;
 }
-.portada-articulo3 h1 {
+.magazine_article3 h1 {
   color: yellow;
   font-family: "Mukta", sans-serif;
   font-size: 25px;
   margin: 0;
 }
-.portada-articulo4 {
+.magazine_mainArticle {
   grid-area: 6/1/7/4;
   text-align: right;
 }
-.portada-articulo4 h2 {
+.magazine_mainArticle h2 {
   font-size: 50px;
 }
-.portada-articulo4 h3 {
+.magazine_mainArticle h3 {
   font-family: "Dosis", sans-serif;
   color: white;
   font-size: 29px;
