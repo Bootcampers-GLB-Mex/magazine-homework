@@ -1,0 +1,76 @@
+.magazine {
+  background-image: url("loki.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 500px;
+}
+.magazine_grid {
+  display: grid;
+  grid-template: 15% 0.9fr 1.6fr 0.6fr 2fr / 1fr 1fr 1fr;
+}
+.magazine_title {
+  display: grid;
+  grid-template: 95% / 1fr;
+}
+.title_text {
+  grid-area: 1/1/2/4;
+  margin-top: 0;
+  color: white;
+  font-size: 92px;
+  font-family: "Oswald", sans-serif;
+}
+.title_name {
+  grid-area: 2/1/3/3;
+}
+.title_name p {
+  color: black;
+  font-family: "Oswald", sans-serif;
+  background-color: yellow;
+}
+
+.magazine_article {
+  grid-area: 3/3/5/4;
+  text-align: right;
+}
+p {
+  color: yellow;
+  margin: 0;
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+}
+h2 {
+  font-family: "Dosis", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  display: inline;
+}
+.magazine_article2 {
+  grid-area: 4/3/6/4;
+  text-align: right;
+}
+.magazine_article3 {
+  grid-area: 5/3/6/4;
+  text-align: right;
+}
+.magazine_article3 h1 {
+  color: yellow;
+  font-family: "Mukta", sans-serif;
+  font-size: 25px;
+  margin: 0;
+}
+.magazine_mainArticle {
+  grid-area: 6/1/7/4;
+  text-align: right;
+}
+.magazine_mainArticle h2 {
+  font-size: 50px;
+}
+.magazine_mainArticle h3 {
+  font-family: "Dosis", sans-serif;
+  color: white;
+  font-size: 29px;
+  margin: 0;
+}
