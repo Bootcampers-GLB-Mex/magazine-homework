@@ -4,68 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS Styles-->
     <link href="./styles/master.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <title>Magazine</title>
   </head>
+
   <body>
-    <div class="content">
-      <form class="survey-form">
+    <div class="conteiner"> <!--Body of magazine--> 
+      <form class="magForm"> <!--Space from magazine border to center--> 
         <br />
-        <label class="title">Traveling to Everest</label>
-        <p class="description">Destination for climbers and adventure-seekers.</p>
-        <br />
+        <!--Magazine Title and description-->
+        <header class="headerMag">
+            <a href="https://www.nationalgeographic.org/encyclopedia/mount-everest/" class="headerMag__title" target="_blank" title="Link more Information">
+            Traveling to Everest
+            </a>
+            <p class="headerMag__description">Destination for climbers and adventure-seekers.</p>
+        </header>
         <br />
 
-        <div class="about">
-          <div class="about1">
-            <h6 class="titleAbout">ARE YOU READY FOR EVEREST?</h6>
-            <p class="descriptionAbout">
+        <div class="about"> <!--Subtitles and descriptions from magazine--> 
+
+          <article class="about1">
+            <h6 class="about__title">ARE YOU READY FOR EVEREST?</h6> 
+            <p class="about__description">
               Make your dreams comes true with these recomendations. We invite you
               to see our turist attractions and enjoy the views.
             </p>
-          </div>
-          <div class="about2">
-            <h6 class="titleAbout">LANDFORMS AND LANDSCAPES</h6>
-            <p class="descriptionAbout">
-                Search through these resources to discover more about unique landforms and landscapes around the world.
-            </p>
-          </div>
-          <div class="about3">
-            <h6 class="titleAbout">HILLARY'S STEP</h6>
-            <p class="descriptionAbout">
-              Climber traffic congested the Hillary Step on May 19, 2012. 
-              Some climbers spent up to two hours on this 12-meter rock face at the foot of the summit, losing body heat.
-            </p>
-          </div>
-          <div class="about4">
-              <h6 class="titleAbout">MOUNT EVEREST</h6>
-              <p class="descriptionAbout">
-                  Mount Everest is the highest of the Himalayan mountains, and at 8,849 meters (29,032 feet) is considered the highest point on Earth.
-              </p>
-            </div>
+          </article>
+
+          <article class="about2">
+                <h6 class="about__title">LANDFORMS AND LANDSCAPES</h6>
+                <p class="about__description">
+                    Search through these resources to discover more about unique landforms and landscapes around the world.
+                </p>
+          </article>
+
+          <article class="about3">
+                <h6 class="about__title">HILLARY'S STEP</h6>
+                <p class="about__description">
+                Climber traffic congested the Hillary Step on May 19, 2012. 
+                Some climbers spent up to two hours on this 12-meter rock face at the foot of the summit, losing body heat.
+                </p>
+          </article>
+
+          <article class="about4">
+                <h6 class="about__title">MOUNT EVEREST</h6>
+                <p class="about__description">
+                    Mount Everest is the highest of the Himalayan mountains, and at 8,849 meters (29,032 feet) is considered the highest point on Earth.
+                </p>
+          </article>
         </div>
+
         <br>
-        <div class="contFooter">
-          <div class="contFooterDiv">
-              <h1 class="footerTitle">The Khumbu Icefall</h1>
-              <p class="footerDescription">Hilaree O'Neill bridges a crevasse in the Khumbu Icefall via a bridge that has been made by joining aluminum ladders.</p>
-          </div>
-          <div class="contFooterBar">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/EAN13.svg/1200px-EAN13.svg.png" class="codeBar">
-          </div>
-        </div>
+        <section class="lastSection"> <!--Conteiner of footer, just show a information--> 
+          <article class="lastSection__article">
+              <h1 class="article__title">The Khumbu Icefall</h1>
+              <p class="article__description">Hilaree O'Neill bridges a crevasse in the Khumbu Icefall via a bridge that has been made by joining aluminum ladders.</p>
+          </article>
+          <article class="lastSection__barcode"> <!--Code bar detail--> 
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/EAN13.svg/1200px-EAN13.svg.png" class="barcode__image">
+          </article>
+        </section>
+
       </br>
       </form>
     </div>
