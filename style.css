@@ -4,7 +4,7 @@
   --yellow: #f4dc49;
   --black: #000;
   --highlight: #ffde32;
-  font-size: 62.5%;
+  font-size: 14px;
 }
 
 * {
@@ -57,6 +57,7 @@ body {
 
 .magazine__header--highlight {
   background-color: var(--highlight);
+  color: var(--black);
 }
 
 .magazine__header__image {
@@ -73,7 +74,7 @@ body {
   align-self: self-end;
 }
 
-.magazine__rightTop p {
+.magazine__rightTop__new__paragraph {
   font-size: 1rem;
   text-align: end;
 }
@@ -83,7 +84,7 @@ body {
   padding-right: 2rem;
 }
 
-.magazine__rightTop span {
+.magazine__rightTop__text--displayBlock {
   display: block;
   text-align: end;
 }
@@ -96,7 +97,7 @@ body {
   margin-left: 2.3rem;
 }
 
-.magazine__leftTop__new p {
+.magazine__leftTop__new__paragraph {
   font-size: 1rem;
   font-weight: 600;
 }
@@ -126,7 +127,7 @@ body {
   color: var(--black);
 }
 
-.magazine__mainTitle h1 {
+.magazine__mainTitle__title {
   color: var(--black);
   font-family: "Stint Ultra Condensed", cursive;
   font-size: 7rem;
@@ -167,19 +168,19 @@ body {
   .magazine__header__date {
     font-size: 1.5rem;
   }
-  .magazine__leftTop__new p,
-  .magazine__rightTop p {
+  .magazine__leftTop__new__paragraph,
+  .magazine__rightTop__new__paragraph {
     font-size: 0.8rem;
   }
   .magazine__leftTop__new__title--yellow,
   .magazine__rightTop__new--borderRightYellow,
-  .magazine__mainDescription p {
-    font-size: inherit;
+  .magazine__mainDescription__paragraph {
+    font-size: 0.8rem;
   }
   .magazine__mainTitle {
     margin: 0 0 0 2rem;
   }
-  .magazine__mainTitle h1 {
+  .magazine__mainTitle__title {
     font-size: 6rem;
   }
   .magazine__mainTitle--smaller {
@@ -205,18 +206,18 @@ body {
   .magazine__header__image {
     width: 10rem;
   }
-  .magazine__leftTop__new p,
-  .magazine__rightTop p,
+  .magazine__leftTop__new__paragraph,
+  .magazine__rightTop__new__paragraph,
   .magazine__leftTop__new__title--yellow,
   .magazine__rightTop__new--borderRightYellow,
-  .magazine__mainDescription p {
+  .magazine__mainDescription__paragraph {
     font-size: 0.45rem;
   }
   .magazine__mainTitle {
     margin: 0;
     align-self: center;
   }
-  .magazine__mainTitle h1 {
+  .magazine__mainTitle__title {
     font-size: 2rem;
   }
   .magazine__mainTitle--smaller {
