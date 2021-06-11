@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main__container {
+  background-image: url("/img/japan.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 41rem;
+  padding: 2rem;
+  border: solid 1.5rem;
+  border-color: #979797;
+  color: #ffffff;
+}
+
+.main__container h1 {
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: #ffffff;
+  font-size: 7rem;
+  text-transform: uppercase;
+  margin-top: 1.8rem;
+  margin-left: 5rem;
+  margin-bottom: 0.5rem;
+  width: 75%;
+}
+
+.main__container h4 {
+  text-align: right;
+  width: 70%;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0.5rem;
+}
+
+.description h2 {
+  text-align: left;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 2.5em;
+  width: 45%;
+  font-family: "Roboto", sans-serif;
+}
+
+.topics__container {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  margin-top: 18.9rem;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.first__topics__container,
+.second__topics__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  height: auto;
+  width: 50%;
+  font-size: 1.4rem;
+  padding: 1.2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin-top: 1.8rem;
+  margin-left: 12.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+  .main__container {
+    height: 90vh;
+    width: 48rem;
+  }
+
+  .main__container h1 {
+    font-size: 8.8rem;
+    margin-top: 1.8rem;
+  }
+
+  .main__container h4 {
+    font-size: 1.6rem;
+  }
+
+  .description h2 {
+    font-size: 2.4rem;
+    margin-top: 3.5em;
+  }
+
+  .topics__container {
+    margin-top: 21.5rem;
+  }
+
+  .first__topics__container,
+  .second__topics__container {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+    margin-left: 14rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__container {
+    height: 90vh;
+    width: 48rem;
+  }
+
+  .main__container h1 {
+    font-size: 7rem;
+    margin-top: 1.5rem;
+  }
+
+  .main__container h4 {
+    font-size: 1rem;
+  }
+
+  .description h2 {
+    font-size: 1.8rem;
+    margin-top: 3em;
+  }
+
+  .topics__container {
+    margin-top: 13rem;
+  }
+
+  .first__topics__container,
+  .second__topics__container {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    margin-left: 10rem;
+    font-size: 1.6rem;
+  }
+}
