@@ -15,17 +15,21 @@
   font-size: 100%; /* 100% = 16px */
 }
 
-/*Structure of body*/
 body {
   background: var(--backgroundColor1);
   background: var(--backgroundColor2);
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /*Making the magazine paper*/
-.conteiner {
+.magazine {
   background-image: url("https://wallpaperaccess.com/full/1483808.jpg");
   background-color: #cccccc;
   background-position: center;
@@ -43,15 +47,16 @@ body {
 }
 
 /*Margin from Magazine's border to left and right margin*/
-.magForm {
+.magazine .magazine__container {
   margin-right: 1rem;
   margin-left: 1rem;
 }
 
-/*Style for title Traveling to Everest (anchor)*/
-.headerMag .headerMag__title {
-  display: flex;
-  justify-content: center;
+.magazine__container .conteiner__header {
+  margin: 0px;
+}
+
+.conteiner__header .header--title {
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 2rem;
@@ -60,15 +65,14 @@ body {
   text-align: center;
   transition: 0.3s;
   text-decoration: none;
+  margin: 0px;
 }
 
-/*Little effect if your mouse passes over the title Traveling to Everest*/
-.headerMag .headerMag__title:hover {
+.conteiner__header .header--title:hover {
   font-size: 2.1rem;
 }
 
-/*Style for description "Destination for climbers..." */
-.headerMag .headerMag__description {
+.conteiner__header .header--description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,40 +82,38 @@ body {
   font-weight: 1;
   font-style: italic;
   text-shadow: 2px 2px 5px black;
-  margin: 0px;
 }
 
-/*Section for content "about"*/
-.about {
+.conteiner__about {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 0.3rem;
   grid-auto-rows: minmax(100px, auto);
 }
 
-.about .about1 {
+.conteiner__about .about__block1 {
   grid-column: 1/3;
   grid-row: 1;
 }
 
-.about .about2 {
+.conteiner__about .about__block2 {
   grid-column: 1/3;
   grid-row: 2;
 }
 
-.about .about3 {
+.conteiner__about .about__block3 {
   grid-column: 1/3;
   grid-row: 3;
 }
 
-.about .about4 {
+.conteiner__about .about__block4 {
   grid-column: 3/5;
   grid-row: 1/3;
   padding-top: 5rem;
 }
 
-.about .about__title {
+.conteiner__about .about--title {
   margin: 0px;
   padding-top: 0.8rem;
   display: flex;
@@ -127,11 +129,11 @@ body {
   border-width: 0.1rem;
 }
 
-.about .about__title:hover {
+.conteiner__about .about--title:hover {
   font-size: 0.8rem;
 }
 
-.about .about__description {
+.conteiner__about .about--description {
   margin: 0;
   padding-top: 0.5rem;
   display: flex;
@@ -143,8 +145,8 @@ body {
   text-shadow: 1px 1px 1px black;
 }
 
-/*Section for content "LastSection" (Title with codeBar)*/
-.lastSection {
+/*Section for content "conteiner__bottom" (Title with BarCode)*/
+.conteiner__bottom {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -152,12 +154,12 @@ body {
   grid-auto-rows: minmax(100px, auto);
 }
 
-.lastSection .lastSection__article {
+.conteiner__bottom .bottom__infoBlock5 {
   grid-column: 1/4;
   grid-row: 1;
 }
 
-.lastSection .lastSection__barcode {
+.conteiner__bottom .bottom__barBlock5 {
   grid-column: 4/5;
   grid-row: 1;
   display: flex;
@@ -165,7 +167,7 @@ body {
   justify-content: flex-end;
 }
 
-.lastSection .lastSection__article .article__title {
+.conteiner__bottom .bottom__infoBlock5 .infoBlock5--title {
   font-family: "Oswald", sans-serif;
   color: yellow;
   text-shadow: 1px 1px 1px black;
@@ -174,7 +176,7 @@ body {
   margin-bottom: 0.3rem;
 }
 
-.lastSection .lastSection__article .article__description {
+.conteiner__bottom .bottom__infoBlock5 .infoBlock5--description {
   margin: 0px;
   font-family: "Oswald", sans-serif;
   color: white;
@@ -182,34 +184,41 @@ body {
   font-size: 0.7rem;
 }
 
-.lastSection .lastSection__barcode .barcode__image {
+.conteiner__bottom .bottom__barBlock5 .barBlock5--img {
   width: 100%;
   height: auto;
 }
 
-/*-- Media Queryies-- */
-@media (min-width: 600px) {
-  body {
-    margin-top: 0.5rem;
-  }
-  .conteiner {
+/*-- Media Queries-- */
+@media (min-width: 1200px) {
+  /*   body {
+    margin-top: 3rem;
+  } */
+  .magazine {
     width: 380px;
     height: 600px;
     border-color: #eecc41;
   }
-  .about .about__title {
+  .conteiner__header .header--description {
+    padding: 0.05rem;
+  }
+  .conteiner__about {
+    grid-gap: 2rem;
+  }
+
+  .conteiner__about .about--title {
     font-size: 0.9rem;
   }
-  .about .about__title:hover {
+  .conteiner__about .about--title:hover {
     font-size: 1rem;
   }
-  .about .about__description {
+  .conteiner__about .about--description {
     font-size: 0.69rem;
   }
-  .lastSection {
+  .conteiner__bottom {
     margin-top: 0rem;
   }
-  .lastSection .lastSection__article .article__title {
+  .conteiner__bottom .bottom__infoBlock5 .infoBlock5--title {
     margin-top: 1rem;
   }
 }
@@ -222,6 +231,6 @@ body {
 
 @media all and (min-height: 600px) and (min-height: 900px) {
   body {
-    margin-top: 13vh;
+    margin-top: 0vh;
   }
 }
