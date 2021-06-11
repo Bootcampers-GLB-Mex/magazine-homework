@@ -1,0 +1,52 @@
+:root {
+  --pink: #eb818a;
+  --white: #ffffff;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: "Mate SC", serif;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  background-image: url("https://i.pinimg.com/originals/f8/8c/4f/f88c4f89687123623d0c007933ad890d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 500px;
+}
+
+.vogue .vogue__title {
+  color: var(--pink);
+  display: flex;
+  justify-content: space-around;
+  font-size: 8.7rem;
+}
+
+.vogue .vogue__section .vogue__subtitle {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.vogue .vogue__sectionSubtitle {
+  text-align: right;
+  margin-top: 1.4rem;
+}
+
+.vogue .vogue__sectionSubtitle .vogue__bottomSubtitle {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+.footerData {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.footerData .footerData__text {
+  color: #f8e5c5;
+  font-size: 1.2rem;
+}
