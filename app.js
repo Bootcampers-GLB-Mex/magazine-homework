@@ -135,22 +135,25 @@ let doc2 = `
 `;
 
 function getTags(HTMLAsString) {
-  let doc = new DOMParser().parseFromString(HTMLAsString, "text/html");
-  let all = doc.body.getElementsByTagName("*");
-  let tags = {};
-  for (let i = 0, max = all.length; i < max; i++) {
-    let tagname = all[i];
-    tags[`${tagname.tagName}`] = tagname.innerText.replace(/\s+/g, " ").trim();
-  }
+  const doc = new DOMParser().parseFromString(HTMLAsString, "text/html");
+  const all = doc.body.getElementsByTagName("*")[0];
 
-  console.log(tags);
+  const Elem = (e) => ({
+    toJSON: () => ({
+      [e.tagName]: e.textContent.replace(/\s+/g, " ").trim(),
+      children: Array.from(e.children, Elem)
+    })
+  });
+
+  // html2json :: Node -> JSONString
+  const html2json = (e) => JSON.stringify(Elem(e), null, "  ");
+
+  console.log(html2json(all));
 }
-// Referencias: https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements
 
-// Revista: https://codesandbox.io/s/zealous-pine-ymlz7?file=/index.html:0-2193
-console.log(
-  "Tags revista 1: https://codesandbox.io/s/zealous-pine-ymlz7?file=/index.html:0-2193"
-);
+//  Referencias:
+// https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements
+// https://stackoverflow.com/questions/12980648/map-html-to-json
 getTags(doc1);
 
 // Revista: https://codesandbox.io/s/magazine-cover-db3jh?file=/index.html:0-2276
