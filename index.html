@@ -2,25 +2,96 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto:wght@100;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <h1 class="header" id="header1">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h2 class="header" id="header2">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h3 class="header" id="header3">Hola <b>#BootcampMex</b> 2021!</h1>
-    <h4 class="header" id="header4">Hola <b>#BootcampMex</b> 2021!</h1>
+    <main class="container">
+      <section class="magazine">
+        <header class="magazine__header">
+          <div class="magazine__header__top">
+            <h2 class="magazine__header__title">
+              ¿QUIENES SON LOS
+              <span class="magazine__header--highlight"
+                >"PEQUEÑOS GIGANTES"</span
+              >
+              DE LA LÓGISTICA EN MÉXICO?
+            </h2>
+            <figure>
+              <img
+                class="magazine__header__image"
+                src="https://cdn.forbes.com.mx/2020/04/Mexico.png"
+                alt="Forbes logo"
+              />
+            </figure>
+            <p class="magazine__header__date">DICIEMBRE 2020 / ENERO 2021</p>
+          </div>
+        </header>
+        <aside class="magazine__rightTop">
+          <div class="magazine__rightTop__new--borderRightYellow">
+            <h3>
+              <span class="magazine__rightTop__text--displayBlock">HOGAR</span>
+              <span class="magazine__rightTop__text--displayBlock">DULCE</span>
+              <span class="magazine__rightTop__text--displayBlock">HOGAR</span>
+            </h3>
+            <p class="magazine__rightTop__new__paragraph">
+              CONVERTIR EL
+              <span class="magazine__rightTop__text--displayBlock"
+                >OCIO EN NEGOCIO</span
+              >
+            </p>
+          </div>
+        </aside>
+        <aside class="magazine__leftTop">
+          <div class="magazine__leftTop__new">
+            <h3 class="magazine__leftTop__new__title--yellow">FUTBOL</h3>
+            <p class="magazine__leftTop__new__paragraph">
+              ESTADOS UNIDOS
+              <span>SUPERA A MÉXICO</span>
+              <span>DENTRO Y FUERA DE LA CANCHA</span>
+            </p>
+          </div>
+          <div class="magazine__leftTop__new">
+            <h3
+              class="magazine__leftTop__new__title--yellow magazine__leftTop__new--borderTopGray"
+            >
+              NETFLIX
+            </h3>
+            <p class="magazine__leftTop__new__paragraph">
+              ¿CÓMO VENCER A HOLLYWOOD EN UN SÓLO CAPÍTULO
+            </p>
+          </div>
+        </aside>
+        <div class="magazine__mainTitle">
+          <h1 class="magazine__mainTitle__title">
+            GENIOS
+            <span class="magazine__mainTitle--smaller"
+              >DE LA TRANSFORMACIÓN</span
+            >
+            DIGITAL
+          </h1>
+        </div>
+        <div class="magazine__mainDescription">
+          <p class="magazine__mainDescription__paragraph">
+            LA CONTINGENCIA SANITARIA ACELERÓ LOS PROCESOS DE INNOVACIÓN Y
+            OBLIGÓ A MUCHAS EMPRESAS A ENFRENTAR LA NUEVA NORMALIDAD CON
+            <span class="magazine__mainDescription--highlight"
+              >INGENIO, TECNLOGÍA Y TRABAJO EN EQUIPO.</span
+            >
+            FORBES SELECCIONÓ A QUIENES ENCABEZARON LOS MEJORES PROCESOS DE
+            TRANSICIÓN DE MÉXICO.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
   </body>
 </html>
-
