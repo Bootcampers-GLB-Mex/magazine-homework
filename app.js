@@ -1,4 +1,4 @@
-let doc1 = `
+const doc1 = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +56,7 @@ let doc1 = `
 </html>
 `;
 
-let doc2 = ` 
+const doc2 = ` 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,26 +135,25 @@ let doc2 = `
 
 function getTags(HTMLAsString) {
   const doc = new DOMParser().parseFromString(HTMLAsString, "text/html");
-  const all = doc.body.getElementsByTagName("*")[0];
 
   let toReturn = {
-    tituloPrincipal: "",
-    subTitulo: "",
-    fecha: "Sin fecha",
-    articulos: {},
-    firma: "Sin firma"
+    mainTitle: "",
+    subTitle: "",
+    date: "No date",
+    articles: "No articles",
+    sign: "No sign"
   };
 
-  function getMainTitle(html, obj) {
-    const title = html.getElementsByTagName("h1")[0].innerText;
-    obj.tituloPrincipal = title;
+  function getMainTitle() {
+    const title = doc.getElementsByTagName("h1")[0].innerText;
+    toReturn.mainTitle = title;
   }
 
-  function getSubtitle(html, obj) {
-    const subtitle = html
+  function getSubtitle() {
+    const subtitle = doc
       .getElementsByTagName("h1")[0]
       .parentNode.getElementsByTagName("p").innerText;
-    obj.subTitulo = subtitle === undefined ? "Sin subtitulo" : subtitle;
+    toReturn.subTitle = subtitle === undefined ? "No subtitle" : subtitle;
   }
 
   function toArray(obj) {
@@ -165,56 +164,56 @@ function getTags(HTMLAsString) {
     return str.replace(/\s+/g, " ").trim();
   }
 
-  function getArticles(html, obj) {
-    const hTags = ["h1", "h2", "h3", "h4", "h5", "h6"];
+  function getArticles() {
+    const hTags = ["h2", "h3", "h4", "h5", "h6"];
     let articleCounter = 0;
     let articles = {};
 
     hTags.forEach((tag) => {
-      let headTag = html.getElementsByTagName(tag);
+      let headTag = doc.getElementsByTagName(tag);
 
       if (headTag) {
         toArray(headTag).forEach((h) => {
           articleCounter++;
           const text = h.parentNode.querySelector("p")
             ? h.parentNode.querySelector("p").innerText
-            : "Sin texto";
-          articles[`articulo${articleCounter}`] = {
-            Titulo: cleanString(h.innerText),
-            Contenido: cleanString(text)
+            : "No text";
+          articles[`article_${articleCounter}`] = {
+            Title: cleanString(h.innerText),
+            Content: cleanString(text)
           };
         });
       }
     });
-    obj["articulos"] = articles;
+    toReturn["articles"] = articles;
   }
 
-  function getDate(doc, obj) {
+  function getDate() {
     const dateClass = ["magazine__date", "date", "magazine__header__date"];
 
     dateClass.forEach((tag) => {
       const dateByClass = doc.getElementsByClassName(tag);
       if (dateByClass[0] !== undefined) {
-        obj["fecha"] = cleanString(dateByClass[0].innerText);
+        toReturn["date"] = cleanString(dateByClass[0].innerText);
       }
     });
   }
 
-  function getSign(doc, obj) {
+  function getSign() {
     const signClass = ["attribution__url", "attribution", "sign"];
     signClass.forEach((tag) => {
       const signByClass = doc.getElementsByClassName(tag);
       if (signByClass[0] !== undefined) {
-        obj["firma"] = cleanString(signByClass[0].innerText);
+        toReturn["sign"] = cleanString(signByClass[0].innerText);
       }
     });
   }
 
-  getMainTitle(doc, toReturn);
-  getSubtitle(doc, toReturn);
-  getArticles(doc, toReturn);
-  getDate(doc, toReturn);
-  getSign(doc, toReturn);
+  getMainTitle();
+  getSubtitle();
+  getArticles();
+  getDate();
+  getSign();
 
   return toReturn;
 }
@@ -226,5 +225,5 @@ console.log(getTags(doc2));
 // https://stackoverflow.com/questions/12980648/map-html-to-json
 // https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements
 
-//  Revista 1: https://codesandbox.io/s/zealous-pine-ymlz7?file=/index.html:0-2193
+// Revista 1: https://codesandbox.io/s/zealous-pine-ymlz7?file=/index.html:0-2193
 // Revista 2: https://codesandbox.io/s/magazine-cover-db3jh?file=/index.html:0-2276
