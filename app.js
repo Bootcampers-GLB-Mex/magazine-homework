@@ -69,8 +69,7 @@ let doc2 = `
   <body>
     <div class="container">
       <main class="magazine">
-        <small class="magazine__url"
-          >Nationalgeographic.com/magazine |
+        <small class="magazine__url">Nationalgeographic.com/magazine |
           <span class="magazine__date">August 2009</span>
         </small>
 
@@ -138,26 +137,94 @@ function getTags(HTMLAsString) {
   const doc = new DOMParser().parseFromString(HTMLAsString, "text/html");
   const all = doc.body.getElementsByTagName("*")[0];
 
-  const Elem = (e) => ({
-    toJSON: () => ({
-      [e.tagName]: e.textContent.replace(/\s+/g, " ").trim(),
-      children: Array.from(e.children, Elem)
-    })
-  });
+  let toReturn = {
+    tituloPrincipal: "",
+    subTitulo: "",
+    fecha: "Sin fecha",
+    articulos: {},
+    firma: "Sin firma"
+  };
 
-  // html2json :: Node -> JSONString
-  const html2json = (e) => JSON.stringify(Elem(e), null, "  ");
+  function getMainTitle(html, obj) {
+    const title = html.getElementsByTagName("h1")[0].innerText;
+    obj.tituloPrincipal = title;
+  }
 
-  console.log(html2json(all));
+  function getSubtitle(html, obj) {
+    const subtitle = html
+      .getElementsByTagName("h1")[0]
+      .parentNode.getElementsByTagName("p").innerText;
+    obj.subTitulo = subtitle === undefined ? "Sin subtitulo" : subtitle;
+  }
+
+  function toArray(obj) {
+    return Array.from(obj);
+  }
+
+  function cleanString(str) {
+    return str.replace(/\s+/g, " ").trim();
+  }
+
+  function getArticles(html, obj) {
+    const hTags = ["h1", "h2", "h3", "h4", "h5", "h6"];
+    let articleCounter = 0;
+    let articles = {};
+
+    hTags.forEach((tag) => {
+      let headTag = html.getElementsByTagName(tag);
+
+      if (headTag) {
+        toArray(headTag).forEach((h) => {
+          articleCounter++;
+          const text = h.parentNode.querySelector("p")
+            ? h.parentNode.querySelector("p").innerText
+            : "Sin texto";
+          articles[`articulo${articleCounter}`] = {
+            Titulo: cleanString(h.innerText),
+            Contenido: cleanString(text)
+          };
+        });
+      }
+    });
+    obj["articulos"] = articles;
+  }
+
+  function getDate(doc, obj) {
+    const dateClass = ["magazine__date", "date", "magazine__header__date"];
+
+    dateClass.forEach((tag) => {
+      const dateByClass = doc.getElementsByClassName(tag);
+      if (dateByClass[0] !== undefined) {
+        obj["fecha"] = cleanString(dateByClass[0].innerText);
+      }
+    });
+  }
+
+  function getSign(doc, obj) {
+    const signClass = ["attribution__url", "attribution", "sign"];
+    signClass.forEach((tag) => {
+      const signByClass = doc.getElementsByClassName(tag);
+      if (signByClass[0] !== undefined) {
+        obj["firma"] = cleanString(signByClass[0].innerText);
+      }
+    });
+  }
+
+  getMainTitle(doc, toReturn);
+  getSubtitle(doc, toReturn);
+  getArticles(doc, toReturn);
+  getDate(doc, toReturn);
+  getSign(doc, toReturn);
+
+  return toReturn;
 }
+console.log(getTags(doc1));
+console.log(getTags(doc2));
 
 //  Referencias:
-// https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements
-// https://stackoverflow.com/questions/12980648/map-html-to-json
-getTags(doc1);
 
-// Revista: https://codesandbox.io/s/magazine-cover-db3jh?file=/index.html:0-2276
-console.log(
-  "Tags revista 2: https://codesandbox.io/s/magazine-cover-db3jh?file=/index.html:0-2276"
-);
-getTags(doc2);
+// https://stackoverflow.com/questions/12980648/map-html-to-json
+// https://stackoverflow.com/questions/3103962/converting-html-string-into-dom-elements
+
+//  Revista 1: https://codesandbox.io/s/zealous-pine-ymlz7?file=/index.html:0-2193
+// Revista 2: https://codesandbox.io/s/magazine-cover-db3jh?file=/index.html:0-2276
